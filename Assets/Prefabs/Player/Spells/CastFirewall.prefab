@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7270604509046426767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7270604509046426760}
+  - component: {fileID: 2795229639655540369}
+  m_Layer: 0
+  m_Name: CastFirewall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7270604509046426760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270604509046426767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.001982212, y: 14.1252775, z: -49.16068}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2795229639655540369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270604509046426767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a8ae0e09ca3d340a40c82fdbc4ca1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _label: Firewall
+  _upgradeDescription: Increase lifetime
+  _icon: {fileID: 21300000, guid: 8ec5b52b09d90074a83d61c1334190f9, type: 3}
+  _buyPrice: 3
+  _isBought: 0
+  _combination:
+  - {fileID: 11400000, guid: f483e64302ff69f4c98120e83dc8287c, type: 2}
+  - {fileID: 11400000, guid: f483e64302ff69f4c98120e83dc8287c, type: 2}
+  - {fileID: 11400000, guid: 70cf77084e8cec74e971c806c7ec99d4, type: 2}
+  _scalePerLevel: 0.1
+  SpeedToTarget: 0
+  CreatedInstance: {fileID: 6271046780950265992, guid: 6d9630ef8fb28db42a2cb9bbd4aa6a1e, type: 3}
+  _positionY: -0.1
