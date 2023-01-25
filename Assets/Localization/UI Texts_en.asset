@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI Texts_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3cfcfe2dbcf97f744800689279d19c2b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 40204594483200
+    m_Localized: "Welcome to Magical Defense! \n(click anywhere to continue)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100924891762688
+    m_Localized: Defeat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101130588819456
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101240659939328
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101412513157120
+    m_Localized: Victory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101438685614080
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101461737508864
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101767326109696
+    m_Localized: Stage N
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102072503668736
+    m_Localized: Boss on stage N
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102621840052224
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102712231497728
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102760243695616
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103117149605888
+    m_Localized: Boss on stage N
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103221424197632
+    m_Localized: Stage N
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103365053943808
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103388718206976
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103639105572864
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103769720393728
+    m_Localized: Upgrade spells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103882706554880
+    m_Localized: New spells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104153117528064
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104573999157248
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104618106458112
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104697768873984
+    m_Localized: Resurrect for watching ads?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105138393092096
+    m_Localized: 'To cast spells, you need to combine magical elements
+
+      (click
+      anywhere to continue)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105735267717120
+    m_Localized: To create an explosion, select two fire elements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105960128548864
+    m_Localized: Click on the screen to cast!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106177267666944
+    m_Localized: To see the combinations of available spells, click on the spell
+      book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106843201507328
+    m_Localized: 'Here you can see the combinations for casting the spell and their
+      level
+
+      (click anywhere to continue)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107058394468352
+    m_Localized: Defend the castle, Wizard!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107181648285696
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107251273732096
+    m_Localized: Combination
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

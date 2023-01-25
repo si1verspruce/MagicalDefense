@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Texts Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI Texts
+  m_TableCollectionNameGuidString: 3cfcfe2dbcf97f744800689279d19c2b
+  m_Entries:
+  - m_Id: 40204594483200
+    m_Key: Stage/MenuCanvas/TutorialScreen/Welcome/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100924891762688
+    m_Key: Stage/StageUICanvas/DefeatScreen/Image/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101130588819456
+    m_Key: Stage/StageUICanvas/DefeatScreen/Restart/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101240659939328
+    m_Key: Stage/StageUICanvas/DefeatScreen/Shop/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101412513157120
+    m_Key: Stage/StageUICanvas/VictoryScreen/Victory/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101438685614080
+    m_Key: Stage/StageUICanvas/VictoryScreen/NextStage/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101461737508864
+    m_Key: Stage/StageUICanvas/VictoryScreen/Shop/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101767326109696
+    m_Key: Stage/StageUICanvas/Pause/Screen/StagePanel/Stage/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102072503668736
+    m_Key: Stage/StageUICanvas/Pause/Screen/StagePanel/BossStage/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102621840052224
+    m_Key: Stage/StageUICanvas/Pause/Screen/Restart/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102712231497728
+    m_Key: Stage/StageUICanvas/Pause/Screen/Continue/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102760243695616
+    m_Key: Stage/StageUICanvas/Pause/Screen/Exit/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103117149605888
+    m_Key: Stage/MenuCanvas/MenuScreen/StagePanel/BossStage/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103221424197632
+    m_Key: Stage/MenuCanvas/MenuScreen/StagePanel/Stage/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103365053943808
+    m_Key: Stage/MenuCanvas/MenuScreen/Play/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103388718206976
+    m_Key: Stage/MenuCanvas/MenuScreen/Shop/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103639105572864
+    m_Key: Stage/MenuCanvas/Shop/Screen/BackButton/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103769720393728
+    m_Key: Stage/MenuCanvas/Shop/Screen/SwitchButton/Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103882706554880
+    m_Key: Stage/MenuCanvas/Shop/Screen/SwitchButton/Buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104153117528064
+    m_Key: Stage/MenuCanvas/SpellBook/Screen/BackButton/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104573999157248
+    m_Key: Stage/MenuCanvas/Ressurection/RessurectionYesNoPopupWindow/Confirm/Text
+      (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104618106458112
+    m_Key: Stage/MenuCanvas/Ressurection/RessurectionYesNoPopupWindow/Reject/Text
+      (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104697768873984
+    m_Key: Stage/MenuCanvas/Ressurection/RessurectionYesNoPopupWindow/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105138393092096
+    m_Key: Stage/MenuCanvas/TutorialScreen/Description/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105735267717120
+    m_Key: Stage/MenuCanvas/TutorialScreen/Cast/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105960128548864
+    m_Key: Stage/MenuCanvas/TutorialScreen/Cast/Text2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106177267666944
+    m_Key: Stage/MenuCanvas/TutorialScreen/SpellBook/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106843201507328
+    m_Key: Stage/MenuCanvas/TutorialScreen/Spells/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107058394468352
+    m_Key: Stage/MenuCanvas/TutorialScreen/Spells/Text2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107181648285696
+    m_Key: Stage/MenuCanvas/TutorialScreen/Spells/Arrow1/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107251273732096
+    m_Key: Stage/MenuCanvas/TutorialScreen/Spells/Arrow2/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3100591478870638616
+  references:
+    version: 2
+    RefIds:
+    - rid: 3100591478870638616
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1674635961946
