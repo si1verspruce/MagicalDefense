@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9128723702683100292}
   - component: {fileID: 7703473783631841149}
+  - component: {fileID: -2536394997785652123}
   m_Layer: 0
   m_Name: ThrowBoulder
   m_TagString: Untagged
@@ -58,3 +59,58 @@ MonoBehaviour:
   _worldPositionY: 10
   _worldPositionZ: -50
   _positionZOffset: -1
+--- !u!114 &-2536394997785652123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8151108324010638355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 6482384181669134354
+  references:
+    version: 2
+    RefIds:
+    - rid: 6482384181669134354
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 7703473783631841149}
+        m_TrackedProperties:
+          items:
+          - rid: 6482384181669134355
+          - rid: 6482384181669134356
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 6482384181669134355
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:3cfcfe2dbcf97f744800689279d19c2b
+          m_TableEntryReference:
+            m_KeyId: 3288446287384576
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: _label
+    - rid: 6482384181669134356
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:3cfcfe2dbcf97f744800689279d19c2b
+          m_TableEntryReference:
+            m_KeyId: 3288598792278016
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: _upgradeDescription

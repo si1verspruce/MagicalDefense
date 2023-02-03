@@ -66,14 +66,6 @@ MonoBehaviour:
     m_Localized: Exit
     m_Metadata:
       m_Items: []
-  - m_Id: 103117149605888
-    m_Localized: Boss on stage N
-    m_Metadata:
-      m_Items: []
-  - m_Id: 103221424197632
-    m_Localized: Stage N
-    m_Metadata:
-      m_Items: []
   - m_Id: 103365053943808
     m_Localized: Play
     m_Metadata:
@@ -147,6 +139,114 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 107251273732096
     m_Localized: Combination
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111375021150208
+    m_Localized: Electric Trap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114159766376448
+    m_Localized: Electric Trap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114498259292160
+    m_Localized: Increase lifetime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456083803115520
+    m_Localized: Boss on stage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456569767759872
+    m_Localized: Boss stage!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 457249609912320
+    m_Localized: Stage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2965204913786880
+    m_Localized: Buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2965413345529856
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2966770802659328
+    m_Localized: There are currently no ads to view
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2967191843672064
+    m_Localized: An error occurred while loading ad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2967682510131200
+    m_Localized: You received an additional element until #value# stage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2968322321846272
+    m_Localized: Open an additional magic element for #value# stages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2970323340398592
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2970567306285056
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2986876282769408
+    m_Localized: "Welcome to Magical Defense! \n(click anywhere to continue)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3285119013130240
+    m_Localized: Explosion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3285298957160448
+    m_Localized: Increase area
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286012559265792
+    m_Localized: Fire Breath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286445403049984
+    m_Localized: Increase fire breath count
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286733300076544
+    m_Localized: Firewall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286852724494336
+    m_Localized: Increase lifetime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287193671077888
+    m_Localized: Lightning Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287400362184704
+    m_Localized: Increase move speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287636115623936
+    m_Localized: Meteor Rain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287891330633728
+    m_Localized: Increase meteor count
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3288446287384576
+    m_Localized: Boulder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3288598792278016
+    m_Localized: Increase glide distance
     m_Metadata:
       m_Items: []
   references:

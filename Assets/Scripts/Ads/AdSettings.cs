@@ -58,7 +58,7 @@ public class AdSettings : MonoBehaviour
 
     public bool GetRewardedLoadState()
     {
-        return false;
+        return true;
         /*return _rewarded.IsLoaded();*/
     }
 

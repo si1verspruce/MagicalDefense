@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7270604509046426760}
   - component: {fileID: 2795229639655540369}
+  - component: {fileID: 8854050346275865324}
   m_Layer: 0
   m_Name: CastFirewall
   m_TagString: Untagged
@@ -57,3 +58,58 @@ MonoBehaviour:
   SpeedToTarget: 0
   CreatedInstance: {fileID: 6271046780950265992, guid: 6d9630ef8fb28db42a2cb9bbd4aa6a1e, type: 3}
   _positionY: -0.1
+--- !u!114 &8854050346275865324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270604509046426767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 6482384181669134345
+  references:
+    version: 2
+    RefIds:
+    - rid: 6482384181669134345
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 2795229639655540369}
+        m_TrackedProperties:
+          items:
+          - rid: 6482384181669134346
+          - rid: 6482384181669134347
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 6482384181669134346
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:3cfcfe2dbcf97f744800689279d19c2b
+          m_TableEntryReference:
+            m_KeyId: 3286733300076544
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: _label
+    - rid: 6482384181669134347
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:3cfcfe2dbcf97f744800689279d19c2b
+          m_TableEntryReference:
+            m_KeyId: 3286852724494336
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: _upgradeDescription

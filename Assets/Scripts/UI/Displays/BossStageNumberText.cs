@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class BossStageNumberText : StageNumberText
 {
-    private string AlternativePhrase;
-
-    protected override void Init()
-    {
-        AlternativePhrase = "Boss Stage!";
-    }
+    [SerializeField] private string _alternativePhrase;
 
     private void OnEnable()
     {
         UpdateText();
     }
 
+    public override void Localize()
+    {
+        UpdateText();
+    }
+
     private void UpdateText()
     {
-        Phrase = $"Boss on stage {Stage.BossNumber + 1}";
+        string phrase = $"{PhraseBeforeNumber} {Stage.BossNumber + 1}";
 
         if (Stage.Number == Stage.BossNumber)
-            SetText(AlternativePhrase);
+            SetText(_alternativePhrase);
         else
-            SetText(Phrase);
+            SetText(phrase);
     }
 }

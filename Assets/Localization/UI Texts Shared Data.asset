@@ -63,14 +63,6 @@ MonoBehaviour:
     m_Key: Stage/StageUICanvas/Pause/Screen/Exit/Text (TMP)
     m_Metadata:
       m_Items: []
-  - m_Id: 103117149605888
-    m_Key: Stage/MenuCanvas/MenuScreen/StagePanel/BossStage/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 103221424197632
-    m_Key: Stage/MenuCanvas/MenuScreen/StagePanel/Stage/Text (TMP)
-    m_Metadata:
-      m_Items: []
   - m_Id: 103365053943808
     m_Key: Stage/MenuCanvas/MenuScreen/Play/Text (TMP)
     m_Metadata:
@@ -139,6 +131,122 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 107251273732096
     m_Key: Stage/MenuCanvas/TutorialScreen/Spells/Arrow2/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111375021150208
+    m_Key: Stage/MenuCanvas/CastElectricTrap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114159766376448
+    m_Key: Electric Trap Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114498259292160
+    m_Key: Electric Trap Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450661113303040
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456083803115520
+    m_Key: Boss Stage Text Phrase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456569767759872
+    m_Key: Boss Stage Alternative Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 457249609912320
+    m_Key: Menu Stage Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2965204913786880
+    m_Key: Buy Button Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2965413345529856
+    m_Key: Upgrade Button Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2966770802659328
+    m_Key: Element Bar Ad Not Loaded Rewarded Popup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2967191843672064
+    m_Key: Element Bar Ad Failed Rewarded Popup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2967682510131200
+    m_Key: Element Bar Ad Completed Rewarded Popup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2968322321846272
+    m_Key: Element Bar Popup Confimation Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2970323340398592
+    m_Key: Confirmation Popup Confirm Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2970567306285056
+    m_Key: Confirmation Popup Reject Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2986876282769408
+    m_Key: Stage/MenuCanvas/TutorialScreen/Welcome/Text 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2992225291243520
+    m_Key: Tutorial Screen Localized Check
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3285119013130240
+    m_Key: Cast Explosion Spell Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3285298957160448
+    m_Key: Cast Explosion Spell Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286012559265792
+    m_Key: Cast Fire Breaths Spell Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286445403049984
+    m_Key: Cast Fire Breaths Spell Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286733300076544
+    m_Key: Cast Firewall Spell Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286852724494336
+    m_Key: Cast Firewall Spell Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287193671077888
+    m_Key: Cast Lightning Ball Spell Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287400362184704
+    m_Key: Cast Lightning Ball Spell Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287636115623936
+    m_Key: Cast Meteor Rain Spell Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287891330633728
+    m_Key: Cast Meteor Rain Spell Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3288446287384576
+    m_Key: Throw Boulder Spell Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3288598792278016
+    m_Key: Throw Boulder Spell Description
     m_Metadata:
       m_Items: []
   m_Metadata:

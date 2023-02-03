@@ -25,6 +25,12 @@ MonoBehaviour:
     m_Address: Assets/Localization/Assets Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 71905f040e6bb80478bd3c8b389fb3a2
+    m_Address: CastElectricTrap
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ru
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 1c638c7d2c226cc4d8f7c25d80e7c68d, type: 2}
   m_SchemaSet:

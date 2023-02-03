@@ -16,11 +16,11 @@ public class SpellFullView : SpellShortView
     [SerializeField] private GameObject _upgradeGroup;
     [SerializeField] private Button _upgrade;
 
-    public int UpgradePrice => Spell.UpgradePrice;
-
     public event UnityAction<Spell, SpellFullView> BuyButtonClicked;
     public event UnityAction<Spell, SpellFullView> UpgradeButtonClicked;
     public event UnityAction<int> UpgradePriceChanged;
+
+    public int UpgradePrice => Spell.UpgradePrice;
 
     public override void Init(Spell spell)
     {
@@ -60,6 +60,12 @@ public class SpellFullView : SpellShortView
     {
         InvokeLevelChanged(Spell.Level);
         UpgradePriceChanged?.Invoke(Spell.UpgradePrice);
+    }
+
+    public override void Localize()
+    {
+        base.Localize();
+        _upgradeDescription.text = Spell.UpgradeDescription;
     }
 
     private void OnBuyButtonClick()

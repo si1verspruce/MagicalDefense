@@ -4,25 +4,27 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-public class StageNumberText : MonoBehaviour
+public class StageNumberText : MonoBehaviour, ILocalizable
 {
     [SerializeField] protected Session Stage;
+    [SerializeField] protected string PhraseBeforeNumber;
 
-    protected string Phrase;
     private TextMeshProUGUI _text;
 
     private void Awake()
     {
         _text = GetComponent<TextMeshProUGUI>();
-        Init();
     }
-
-    protected virtual void Init() { }
 
     private void OnEnable()
     {
-        Phrase = $"Stage {Stage.Number + 1}";
-        SetText(Phrase);
+        Localize();
+    }
+
+    public virtual void Localize()
+    {
+        string phrase = $"{PhraseBeforeNumber} {Stage.Number + 1}";
+        SetText(phrase);
     }
 
     protected void SetText(string text)

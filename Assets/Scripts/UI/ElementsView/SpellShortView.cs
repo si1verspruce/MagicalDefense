@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class SpellShortView : MonoBehaviour
+public class SpellShortView : MonoBehaviour, ILocalizable
 {
     [SerializeField] private TextMeshProUGUI _label;
     [SerializeField] private Transform _combinationContainer;
@@ -29,6 +29,11 @@ public class SpellShortView : MonoBehaviour
             var view = Instantiate(_magicElementView, _combinationContainer);
             view.sprite = element.Sprite;
         }
+    }
+
+    public virtual void Localize()
+    {
+        _label.text = Spell.Label;
     }
 
     protected void InvokeLevelChanged(int level)

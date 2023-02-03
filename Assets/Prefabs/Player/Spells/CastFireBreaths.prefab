@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860655819698398232}
   - component: {fileID: 5246761415195358471}
+  - component: {fileID: -2748607478520282049}
   m_Layer: 0
   m_Name: CastFireBreaths
   m_TagString: Untagged
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753c76efde806cc419b849947f8e9c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: Fire breath
+  _label: Fire Breath
   _upgradeDescription: Increase fire breath count
   _icon: {fileID: 21300000, guid: 8b03ad0628d8cec43a17e35fbc3086e4, type: 3}
   _buyPrice: 5
@@ -56,3 +57,58 @@ MonoBehaviour:
   _scalePerLevel: 0.1
   SpeedToTarget: 0
   CreatedInstance: {fileID: 3802450686301924843, guid: ed98f2941d45de6499b247f1f960b263, type: 3}
+--- !u!114 &-2748607478520282049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332349672794289976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 6482384181669134342
+  references:
+    version: 2
+    RefIds:
+    - rid: 6482384181669134342
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 5246761415195358471}
+        m_TrackedProperties:
+          items:
+          - rid: 6482384181669134343
+          - rid: 6482384181669134344
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 6482384181669134343
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:3cfcfe2dbcf97f744800689279d19c2b
+          m_TableEntryReference:
+            m_KeyId: 3286012559265792
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: _label
+    - rid: 6482384181669134344
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:3cfcfe2dbcf97f744800689279d19c2b
+          m_TableEntryReference:
+            m_KeyId: 3286445403049984
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: _upgradeDescription

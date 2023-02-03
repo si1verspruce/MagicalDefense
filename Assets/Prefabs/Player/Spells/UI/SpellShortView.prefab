@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 8113690559835816489}
   - component: {fileID: 8113690559835816490}
   - component: {fileID: 8352783334731585152}
+  - component: {fileID: -3930885096180466035}
   m_Layer: 5
   m_Name: SpellShortView
   m_TagString: Untagged
@@ -557,3 +558,15 @@ MonoBehaviour:
   _label: {fileID: 2378958062381710956}
   _combinationContainer: {fileID: 757489626972838063}
   _magicElementView: {fileID: 910113923577746221, guid: e922cb52e86468e46aae8f34da70d8b2, type: 3}
+--- !u!114 &-3930885096180466035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8113690559835816492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc5d3ef9d1beb846bf8e23bbbd988e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

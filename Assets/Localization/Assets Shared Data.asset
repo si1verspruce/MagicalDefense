@@ -15,12 +15,13 @@ MonoBehaviour:
   m_TableCollectionName: Assets
   m_TableCollectionNameGuidString: a3caae80ffa4c5f4b8bcba956501f141
   m_Entries:
-  - m_Id: 655214415872
-    m_Key: CastElectricTrap
+  - m_Id: 340900321595392
+    m_Key: CastElectricTrap spell
     m_Metadata:
       m_Items: []
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3100591505601200136
   m_KeyGenerator:
     rid: 3100591484057419973
   references:
@@ -30,3 +31,13 @@ MonoBehaviour:
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
         m_CustomEpoch: 1674661959624
+    - rid: 3100591505601200136
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 340900321595392
+          m_TableCodes:
+          - en
+          - ru
+        m_TypeString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

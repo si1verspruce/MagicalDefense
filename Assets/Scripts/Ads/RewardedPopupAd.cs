@@ -13,11 +13,13 @@ public class RewardedPopupAd : MonoBehaviour
     [SerializeField] private PopupWindow _window;
     [SerializeField] private AdSettings _ads;
 
+    private string[] _rewardValues;
+
     public event UnityAction<bool> Rewarded;
 
     public void SetRewardValues(string[] values)
     {
-        _adCompleted.values = values;
+        _rewardValues = values;
     }
 
     public void Show()
@@ -53,7 +55,7 @@ public class RewardedPopupAd : MonoBehaviour
 
         if (popup.isShowWindow)
         {
-            _window.SetMessage(popup.message, popup.values, PopupWindowParameters.ValueTag);
+            _window.SetMessage(popup.message, _rewardValues, PopupWindowParameters.ValueTag);
             _window.gameObject.SetActive(true);
             _window.ConfirmClick += PopupWindowClosed;
         }
