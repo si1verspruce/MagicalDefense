@@ -47,7 +47,7 @@ public class Sound : MonoBehaviour, ISaveable
 
     private void ToggleVolume(bool isOn)
     {
-        AudioListener.pause = !isOn;
+        AudioListener.volume = Convert.ToSingle(isOn);
         _isSoundOn = isOn;
 
         foreach (var toggle in _soundToggles)
