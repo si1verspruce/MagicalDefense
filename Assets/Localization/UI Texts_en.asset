@@ -249,6 +249,10 @@ MonoBehaviour:
     m_Localized: Increase glide distance
     m_Metadata:
       m_Items: []
+  - m_Id: 4716523940909056
+    m_Localized: If you like the game, you can rate it
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -249,6 +249,10 @@ MonoBehaviour:
     m_Key: Throw Boulder Spell Description
     m_Metadata:
       m_Items: []
+  - m_Id: 4716523940909056
+    m_Key: Stage/MenuCanvas/ReviewGameYesNoPopupWindow/Text (TMP)
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
