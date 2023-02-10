@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,7 +23,6 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     private int _bossNumber;
     private bool _isSessionActive = true;
     private bool _isRessurectionAvailable = true;
-    private bool _isGameNew;
     private float _currentTime;
 
     public event UnityAction<int> TimeChanged;
@@ -30,6 +30,9 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
 
     public int Number => _number;
     public int BossNumber => _bossNumber;
+
+    [DllImport("__Internal")]
+    private static extern void SetToLeaderboard(int value);
 
     private void OnEnable()
     {
@@ -45,10 +48,6 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     {
         _saveLoadSystem.Load();
         _bossNumber = (_number / _stageCountBeforeBoss + 1) * _stageCountBeforeBoss - 1;
-
-        if (_isGameNew == false)
-            _menuScreen.OpenScreen();
-
         _currentTime = _time;
     }
 
@@ -79,13 +78,13 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     public void LoadState(string saveData)
     {
         var savedData = JsonUtility.FromJson<SaveData>(saveData);
-        _tutorial.DestroyScreen();
         _number = savedData.number;
+        _menuScreen.OpenScreen();
+        _tutorial.DestroyScreen();
     }
 
     public void LoadByDefault()
     {
-        _isGameNew = true;
         _tutorial.gameObject.SetActive(true);
     }
 
@@ -122,6 +121,10 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
         SessionActivityChanged?.Invoke(_isSessionActive);
         _gamePauseToggle.RequestPause(gameObject);
         _saveLoadSystem.SaveAll();
+
+#if UNITY_WEBGL
+        SetToLeaderboard(_number);
+#endif
     }
 
     [Serializable]

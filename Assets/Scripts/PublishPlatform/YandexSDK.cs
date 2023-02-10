@@ -10,8 +10,8 @@ public class YandexSDK : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _name;
     [SerializeField] private RawImage _photo;
 
-    [DllImport("__Internal")]
-    private static extern void GetPlayerData();
+    /*[DllImport("__Internal")]
+    private static extern void GetPlayerData();*/
 
     public void YandexGetPlayerData()
     {

@@ -25,12 +25,19 @@ public class Shop : MonoBehaviour, ISaveable
     {
         var data = JsonUtility.FromJson<SaveData>(saveData);
 
-        foreach (var spell in _spells)
+        if (data.spellDataList.Count > 0)
         {
-            var dataIndex = data.spellDataList.FindIndex(spellData => spellData.typeName == spell.GetType().ToString());
+            foreach (var spell in _spells)
+            {
+                var dataIndex = data.spellDataList.FindIndex(spellData => spellData.typeName == spell.GetType().ToString());
 
-            if (dataIndex != -1)
-                InitSpell(spell, data.spellDataList[dataIndex].isBought, data.spellDataList[dataIndex].level);
+                if (dataIndex != -1)
+                    InitSpell(spell, data.spellDataList[dataIndex].isBought, data.spellDataList[dataIndex].level);
+            }
+        }
+        else
+        {
+            LoadByDefault();
         }
     }
 

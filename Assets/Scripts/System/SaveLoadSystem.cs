@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class SaveLoadSystem : MonoBehaviour
@@ -12,25 +13,52 @@ public class SaveLoadSystem : MonoBehaviour
 
     private string _saveDirectory;
 
+    [DllImport("__Internal")]
+    private static extern void SaveExtern(string date);
+
+    [DllImport("__Internal")]
+    private static extern void LoadExtern();
+
     public void SaveAll()
     {
         var data = GetDataObject();
         SaveAllData(ref data);
+
+#if UNITY_EDITOR
         SaveFile(data);
+#endif
+
+#if UNITY_WEBGL
+        SaveExtern(JsonUtility.ToJson(data));
+#endif
     }
 
     public void Save(ISaveable saveable)
     {
         var data = GetDataObject();
         SaveObjectData(ref data, saveable);
+
+#if UNITY_EDITOR
         SaveFile(data);
+#endif
+
+#if UNITY_WEBGL
+        SaveExtern(JsonUtility.ToJson(data));
+#endif
     }
 
     public void Load()
     {
         _saveDirectory = Application.persistentDataPath + _localSaveDirectory;
+
+#if UNITY_EDITOR
         var data = LoadFile();
         LoadData(data);
+#endif
+
+#if UNITY_WEBGL
+        LoadExtern();
+#endif
     }
 
     private SaveData GetDataObject()
@@ -105,15 +133,18 @@ public class SaveLoadSystem : MonoBehaviour
                 if (stateIndex == -1)
                     saveable.LoadByDefault();
                 else
-                {
                     saveable.LoadState(data.objectsData[stateIndex].jsonData);
-                }
             }
             else
             {
                 saveable.LoadByDefault();
             }
         }
+    }
+
+    private void LoadExternData(string jsonData)
+    {
+        LoadData(JsonUtility.FromJson<SaveData>(jsonData));
     }
 
     [Serializable]

@@ -1,8 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections.Generic;
 using System;
+using System.Runtime.InteropServices;
 
 public enum RewardedAdState
 {
@@ -15,9 +15,6 @@ public class AdSettings : MonoBehaviour
 {
     [SerializeField] private float _delayBetweenBannerLoads;
 
-    private string _bannerId = "ca-app-pub-3940256099942544/6300978111";
-    private string _interstitialId = "ca-app-pub-3940256099942544/1033173712";
-    private string _rewardedId = "ca-app-pub-3940256099942544/5224354917";
     private bool _rewardedIsLoaded;
 
     public event UnityAction<RewardedAdState> RewardedAdStateChanged;
@@ -25,6 +22,9 @@ public class AdSettings : MonoBehaviour
     public event UnityAction RewardedAdLoaded;
 
     public bool RewardedIsLoaded => _rewardedIsLoaded;
+
+    [DllImport("__Internal")]
+    private static extern void ShowInterstitial();
 
     private void Start()
     {
@@ -47,13 +47,9 @@ public class AdSettings : MonoBehaviour
         LoadBanners();
     }
 
-    public void TryToShowInterstitial()
+    public void RequestShowInterstitial()
     {
-        /*if (_interstitial.IsLoaded())
-        {
-            _interstitial.Show();
-            _interstitial.OnAdClosed += OnInterstitialClosed;
-        }*/
+        ShowInterstitial();
     }
 
     public bool GetRewardedLoadState()

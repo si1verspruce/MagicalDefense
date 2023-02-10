@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -16,30 +17,39 @@ public class ReviewGame : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void GetReviewAvailability();
 
-    private void Awake()
-    {
-        GetReviewAvailability();
-        Debug.Log(_isReviewAvailable);
-
-        if (_isReviewAvailable)
-            _reviewSessionNumber = _session.Number + _sessionCountToReview;
-    }
+    [DllImport("__Internal")]
+    private static extern void OpenReviewWindow();
 
     private void OnEnable()
     {
-        if (_isReviewAvailable)
-            _session.SessionActivityChanged += OnSessionActivityChanged;
+        _window.ConfirmClick += OnWindowConfirmClick;
     }
 
     private void OnDisable()
     {
-        if (_isReviewAvailable)
-            _session.SessionActivityChanged -= OnSessionActivityChanged;
+        _window.ConfirmClick -= OnWindowConfirmClick;
+        _session.SessionActivityChanged -= OnSessionActivityChanged;
     }
 
-    public void YandexSetReviewAvailability(bool isReviewAvailable)
+    private void Start()
     {
-        _isReviewAvailable = isReviewAvailable;
+        StartCoroutine(GetReviewAvailabilityEndOfFrame());
+    }
+
+    public void YandexSetReviewAvailability(int isReviewAvailable)
+    {
+        _isReviewAvailable = Convert.ToBoolean(isReviewAvailable);
+
+        if (_isReviewAvailable)
+        {
+            _session.SessionActivityChanged += OnSessionActivityChanged;
+            _reviewSessionNumber = _session.Number + _sessionCountToReview;
+        }
+    }
+
+    private void OnWindowConfirmClick()
+    {
+        OpenReviewWindow();
     }
 
     private void OnSessionActivityChanged(bool isActive)
@@ -50,11 +60,16 @@ public class ReviewGame : MonoBehaviour
 
             if (_currentSessionNumber == _reviewSessionNumber)
             {
-                GetReviewAvailability();
-
-                if (_isReviewAvailable)
-                    _window.gameObject.SetActive(true);
+                _window.gameObject.SetActive(true);
+                _session.SessionActivityChanged -= OnSessionActivityChanged;
             }
         }
+    }
+
+    private IEnumerator GetReviewAvailabilityEndOfFrame()
+    {
+        yield return new WaitForEndOfFrame();
+
+        GetReviewAvailability();
     }
 }

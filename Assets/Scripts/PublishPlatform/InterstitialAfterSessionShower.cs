@@ -53,7 +53,7 @@ public class InterstitialAfterSessionShower : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(_delay);
 
-        _ads.TryToShowInterstitial();
+        _ads.RequestShowInterstitial();
         Time.timeScale = 0;
     }
 
