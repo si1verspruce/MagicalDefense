@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 101438685614080
-    m_Localized: Next
+    m_Localized: Continue
     m_Metadata:
       m_Items: []
   - m_Id: 101461737508864
@@ -251,6 +251,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4716523940909056
     m_Localized: If you like the game, you can rate it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6197787847987200
+    m_Localized: Unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6181798792040448
+    m_Localized: eng
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8841722466570240
+    m_Localized: en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8852858167529472
+    m_Localized: en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9035940216606720
+    m_Localized: en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9055036018692096
+    m_Localized: Resurrect and stop enemies for watching ad video?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11644110567018496
+    m_Localized: To save your progress in the game, log in to Yandex. Login?
     m_Metadata:
       m_Items: []
   references:

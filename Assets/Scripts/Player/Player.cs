@@ -93,7 +93,7 @@ public class Player : MonoBehaviour, ISaveable, IResetOnRestart
         var instances = _pool.GetInstances(spell.InstanceToCreate);
         ScalePoolInstances(instances, spell.ScaleModifier);
 
-        _saveLoadSystem.Save(this);
+        _saveLoadSystem.SaveAll();
     }
 
     public void BuySpell(Spell spell)
@@ -103,7 +103,7 @@ public class Player : MonoBehaviour, ISaveable, IResetOnRestart
         spell.Buy();
         AddSpell(spell);
 
-        _saveLoadSystem.Save(this);
+        _saveLoadSystem.SaveAll();
     }
 
     public void AddSpell(Spell spell)

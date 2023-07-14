@@ -123,7 +123,7 @@ public class Shop : MonoBehaviour, ISaveable
             view.UpgradeButtonClicked += OnUpgradeButton;
             view.transform.SetParent(_upgradeContainer);
 
-            _saveLoadSystem.Save(this);
+            _saveLoadSystem.SaveAll();
         }
     }
 
@@ -135,7 +135,7 @@ public class Shop : MonoBehaviour, ISaveable
             _moneySound.Play();
             view.UpdateUpgradeGroup();
 
-            _saveLoadSystem.Save(this);
+            _saveLoadSystem.SaveAll();
 
             if (spell.Level == int.MaxValue)
                 view.UpgradeButtonClicked -= OnUpgradeButton;

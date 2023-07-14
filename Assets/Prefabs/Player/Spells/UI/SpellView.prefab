@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 2284440495076776853}
   - component: {fileID: 2284440495076776854}
   - component: {fileID: 2284440495076776852}
-  - component: {fileID: 2037662277242492003}
+  - component: {fileID: 3103497618754748152}
   m_Layer: 5
   m_Name: SpellView
   m_TagString: Untagged
@@ -982,7 +982,7 @@ MonoBehaviour:
   _buyPrice: {fileID: 2284440493904175683}
   _upgradeGroup: {fileID: 2284440494413611561}
   _upgrade: {fileID: 2917406402910202808}
---- !u!114 &2037662277242492003
+--- !u!114 &3103497618754748152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2284440495076776848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cc5d3ef9d1beb846bf8e23bbbd988e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9de3716a91e033449ad4aeff4c5152c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2284440495099290973

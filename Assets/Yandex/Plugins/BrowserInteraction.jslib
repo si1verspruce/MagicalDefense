@@ -1,9 +1,16 @@
 mergeInto(LibraryManager.library, {
 
+  AuthorizeToTheGame: function () {
+    authorizePlayer().then(
+      initLeaderboard().then(
+        gameInstance.SendMessage('Authorization', 'LoadGameScene')));
+  },
+
   GetReviewAvailability: function () {
     ysdk.feedback.canReview()
       .then(({ value, reason }) => {
         if (value) {
+          console.log("review available");
           gameInstance.SendMessage('ReviewGame', 'YandexSetReviewAvailability', Number(value));
         } else {
           console.log(reason)
@@ -55,7 +62,33 @@ mergeInto(LibraryManager.library, {
   },
 
   ShowInterstitial: function() {
-    ysdk.adv.showFullscreenAdv({ })
-  }
+    ysdk.adv.showFullscreenAdv({
+      callbacks: {
+        onClose: () => {
+          console.log('Ad shown');
+          gameInstance.SendMessage('AdSettings', 'OnInterstitialClosed');
+        },
+        onError: () => {
+          console.log('Error on ad showing');
+          gameInstance.SendMessage('AdSettings', 'OnInterstitialClosed');
+        }
+      }
+    })
+  },
 
+  ShowRewarded: function() {
+    ysdk.adv.showRewardedVideo({
+      callbacks: {
+        onRewarded: () => {
+          console.log('Rewarded!');
+          gameInstance.SendMessage('AdSettings', 'OnRewardedEarnedReward');
+        }, 
+        onError: (e) => {
+          console.log('Error while open video ad:', e);
+          gameInstance.SendMessage('AdSettings', 'OnRewardedFailedToShow');
+        }
+      }
+    })
+  },
+  
 });

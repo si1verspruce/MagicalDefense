@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,7 +23,7 @@ public class RewardedPopupAd : MonoBehaviour
     public void Show()
     {
         _ads.RewardedAdStateChanged += OnRewardedAdCompleted;
-        _ads.ShowRewarded();
+        _ads.RequestShowRewarded();
     }
 
     private void OnRewardedAdCompleted(RewardedAdState result)

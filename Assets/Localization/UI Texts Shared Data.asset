@@ -253,6 +253,34 @@ MonoBehaviour:
     m_Key: Stage/MenuCanvas/ReviewGameYesNoPopupWindow/Text (TMP)
     m_Metadata:
       m_Items: []
+  - m_Id: 6181798792040448
+    m_Key: Loading Screen Initialized Check String
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6197787847987200
+    m_Key: Magic Element Cell Unlock Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8841722466570240
+    m_Key: Localization Setter Localized Checker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8852858167529472
+    m_Key: Localization Setter Active Locale Code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9035940216606720
+    m_Key: Localization Setter Locale Checker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9055036018692096
+    m_Key: Ressurection Confirmation Window Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11644110567018496
+    m_Key: Stage/MenuCanvas/AuthorizationYesNoPopupWindow/Text (TMP)
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

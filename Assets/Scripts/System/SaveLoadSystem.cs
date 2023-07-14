@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SaveLoadSystem : MonoBehaviour
 {
@@ -13,30 +14,23 @@ public class SaveLoadSystem : MonoBehaviour
 
     private string _saveDirectory;
 
+    public event UnityAction DataLoaded;
+
     [DllImport("__Internal")]
     private static extern void SaveExtern(string date);
 
     [DllImport("__Internal")]
     private static extern void LoadExtern();
 
+    private void Awake()
+    {
+        transform.parent = null;
+    }
+
     public void SaveAll()
     {
         var data = GetDataObject();
         SaveAllData(ref data);
-
-#if UNITY_EDITOR
-        SaveFile(data);
-#endif
-
-#if UNITY_WEBGL
-        SaveExtern(JsonUtility.ToJson(data));
-#endif
-    }
-
-    public void Save(ISaveable saveable)
-    {
-        var data = GetDataObject();
-        SaveObjectData(ref data, saveable);
 
 #if UNITY_EDITOR
         SaveFile(data);
@@ -140,6 +134,8 @@ public class SaveLoadSystem : MonoBehaviour
                 saveable.LoadByDefault();
             }
         }
+
+        DataLoaded?.Invoke();
     }
 
     private void LoadExternData(string jsonData)

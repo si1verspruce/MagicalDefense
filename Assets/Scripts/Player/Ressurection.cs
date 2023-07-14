@@ -6,7 +6,7 @@ public class Ressurection : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private RewardedPopupAd _ad;
-    [SerializeField] private PauseForEnemies _pause;
+    [SerializeField] private GameObject _continueScreen;
     [SerializeField] private GamePause _gamePause;
     [SerializeField] private YesNoPopupWindow _confirmationWindow;
     [SerializeField] private string _confirmationWindowMessage;
@@ -55,7 +55,7 @@ public class Ressurection : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
-        _pause.Pause();
+        _continueScreen.SetActive(true);
         _player.Ressurect();
     }
 }

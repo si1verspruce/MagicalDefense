@@ -13,13 +13,11 @@ public class Pause : PauseScreen
     {
         base.OpenScreen();
         _screen.SetActive(true);
-        _ads.ShowBanners();
     }
 
     public override void CloseScreen()
     {
         base.CloseScreen();
         _screen.SetActive(false);
-        _ads.DestroyBanners();
     }
 }

@@ -20,7 +20,7 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     [SerializeField] private AdSettings _ad;
 
     private int _number;
-    private int _bossNumber;
+    private int _bossNumber = 4;
     private bool _isSessionActive = true;
     private bool _isRessurectionAvailable = true;
     private float _currentTime;
@@ -47,7 +47,6 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     private void Start()
     {
         _saveLoadSystem.Load();
-        _bossNumber = (_number / _stageCountBeforeBoss + 1) * _stageCountBeforeBoss - 1;
         _currentTime = _time;
     }
 
@@ -61,7 +60,6 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
         else if (_isSessionActive == true)
         {
             _number++;
-            _bossNumber = (_number / _stageCountBeforeBoss + 1) * _stageCountBeforeBoss - 1;
             _player.AddGem();
             OnSessionOver();
             _victoryScreen.gameObject.SetActive(true);
@@ -79,6 +77,7 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     {
         var savedData = JsonUtility.FromJson<SaveData>(saveData);
         _number = savedData.number;
+        _bossNumber = (_number / _stageCountBeforeBoss + 1) * _stageCountBeforeBoss - 1;
         _menuScreen.OpenScreen();
         _tutorial.DestroyScreen();
     }
@@ -102,7 +101,7 @@ public class Session : MonoBehaviour, ISaveable, IResetOnRestart
     {
         if (_health <= 0)
         {
-            if (_isRessurectionAvailable && _ad.RewardedIsLoaded)
+            if (_isRessurectionAvailable)
             {
                 _ressurection.RequestAd();
                 _isRessurectionAvailable = false;

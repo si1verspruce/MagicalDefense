@@ -40,7 +40,6 @@ public class ElementBar : MonoBehaviour, ISaveable, IResetOnRestart
     {
         _confirmationWindow.ConfirmClick += ShowAd;
         _confirmationWindow.RejectClick += OnRejectClick;
-        _ad.RewardedAdLoaded += SetActiveFirstCellButton;
     }
 
     private void OnDisable()
@@ -48,20 +47,14 @@ public class ElementBar : MonoBehaviour, ISaveable, IResetOnRestart
         _confirmationWindow.ConfirmClick -= ShowAd;
         _confirmationWindow.RejectClick -= OnRejectClick;
         _firstCell.Clicked -= RequestAd;
-        _ad.RewardedAdLoaded -= SetActiveFirstCellButton;
     }
 
     public void Reset()
     {
         if (_session.Number >= _sessionUntilFirstCellUnlocked)
-        {
             _firstCell.SetLock(true);
-            _firstCell.SetButtonActive(_ad.RewardedIsLoaded);
-        }
         else
-        {
             _firstCell.SetLock(false);
-        }
     }
 
     private void Init()
@@ -79,11 +72,6 @@ public class ElementBar : MonoBehaviour, ISaveable, IResetOnRestart
         }
     }
 
-    private void SetActiveFirstCellButton()
-    {
-        _firstCell.SetButtonActive(true);
-    }
-
     private void OnRejectClick()
     {
         Time.timeScale = 1;
@@ -91,12 +79,9 @@ public class ElementBar : MonoBehaviour, ISaveable, IResetOnRestart
 
     private void RequestAd()
     {
-        if (_ad.GetRewardedLoadState())
-        {
             _confirmationWindow.gameObject.SetActive(true);
             _confirmationWindow.SetMessage(_confirmationWindowMessage,
                 new string[] { _rewardSessionCountWithFirstCellUnlocked.ToString() }, PopupWindowParameters.ValueTag);
-        }
     }
 
     private void ShowAd()
@@ -112,7 +97,7 @@ public class ElementBar : MonoBehaviour, ISaveable, IResetOnRestart
         {
             _sessionUntilFirstCellUnlocked = _session.Number + _rewardSessionCountWithFirstCellUnlocked;
             _firstCell.SetLock(false);
-            _saveLoad.Save(this);
+            _saveLoad.SaveAll();
         }
 
         _popupAd.Rewarded -= TryGetReward;

@@ -6,11 +6,6 @@ public class BossStageNumberText : StageNumberText
 {
     [SerializeField] private string _alternativePhrase;
 
-    private void OnEnable()
-    {
-        UpdateText();
-    }
-
     public override void Localize()
     {
         UpdateText();

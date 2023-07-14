@@ -9,6 +9,7 @@ public class ReviewGame : MonoBehaviour
     [SerializeField] private YesNoPopupWindow _window;
     [SerializeField] private Session _session;
     [SerializeField] private int _sessionCountToReview;
+    [SerializeField] private SaveLoadSystem _saveLoadSystem;
 
     private bool _isReviewAvailable;
     private int _reviewSessionNumber;
@@ -20,20 +21,22 @@ public class ReviewGame : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void OpenReviewWindow();
 
+    private void Awake()
+    {
+        transform.parent = null;
+    }
+
     private void OnEnable()
     {
         _window.ConfirmClick += OnWindowConfirmClick;
+        _saveLoadSystem.DataLoaded += GetReviewAvailability;
     }
 
     private void OnDisable()
     {
         _window.ConfirmClick -= OnWindowConfirmClick;
+        _saveLoadSystem.DataLoaded -= GetReviewAvailability;
         _session.SessionActivityChanged -= OnSessionActivityChanged;
-    }
-
-    private void Start()
-    {
-        StartCoroutine(GetReviewAvailabilityEndOfFrame());
     }
 
     public void YandexSetReviewAvailability(int isReviewAvailable)
@@ -64,12 +67,5 @@ public class ReviewGame : MonoBehaviour
                 _session.SessionActivityChanged -= OnSessionActivityChanged;
             }
         }
-    }
-
-    private IEnumerator GetReviewAvailabilityEndOfFrame()
-    {
-        yield return new WaitForEndOfFrame();
-
-        GetReviewAvailability();
     }
 }
